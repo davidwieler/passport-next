@@ -72,7 +72,7 @@ Copy `.env.template` to `.env`, which contains:
 ```
 GITHUB_CLIENT_ID=
 GITHUB_CLIENT_SECRET=
-GITHUB_CALLBACK_URL=
+GITHUB_CALLBACK_URL=http://localhost:3000/api/auth/github/callback
 
 MONGODB_CONNECTION=
 
