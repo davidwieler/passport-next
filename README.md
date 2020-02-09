@@ -33,7 +33,7 @@ There is a little bit of setup to get this example repo going.
 
 ### Step 1 - Github OAuth App creation
 
-You'll need to set up a Github OAuth application for these three pieces of information:
+You'll need to set up a Github OAuth application for these two pieces of information:
 
 -   client_id
 -   client_secret
