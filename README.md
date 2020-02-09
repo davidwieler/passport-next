@@ -29,7 +29,7 @@ It uses:
 
 ## Setup
 
-There is a little but of setup to get this example repo going.
+There is a little bit of setup to get this example repo going.
 
 ### Step 1 - Github OAuth App creation
 
