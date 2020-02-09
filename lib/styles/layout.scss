@@ -1,0 +1,86 @@
+nav {
+	display: flex;
+	height: $navHeight;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 $unit * 6;
+	background: #d8d8d8;
+
+	.brand {
+		font-size: $unit * 4;
+		text-transform: uppercase;
+	}
+	.access {
+		font-size: $unit * 4;
+		text-transform: uppercase;
+	}
+}
+
+.layout {
+	main {
+		display: flex;
+		min-height: calc(100vh - #{$navHeight});
+
+		&.logged-in {
+			.page {
+				background: linear-gradient(to bottom, #4989bf 0%, rgba(246, 246, 246, 1) 47%, rgba(255, 255, 255, 1) 100%);
+			}
+		}
+
+		h2 {
+			font-size: $unit * 6;
+			margin-bottom: $unit * 3;
+		}
+
+		.page {
+			display: flex;
+			padding-top: $unit * 12;
+			padding-left: $unit * 6;
+			padding-right: $unit * 6;
+			width: 100vw;
+			background: linear-gradient(to bottom, rgba(216, 216, 216, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(255, 255, 255, 1) 100%);
+
+			&-private {
+				flex-direction: column;
+				text-align: center;
+
+				img {
+					width: 125px;
+					border-radius: 100%;
+					margin-bottom: $unit * 3;
+				}
+			}
+
+			&-login {
+				flex-direction: column;
+				align-items: flex-start;
+
+				.form-wrapper {
+					padding-bottom: $unit * 6;
+					margin-bottom: $unit * 6;
+					border-bottom: 2px solid grey;
+
+					&:last-of-type {
+						border-bottom: 0;
+					}
+
+					input {
+						margin-bottom: $unit * 6;
+					}
+				}
+			}
+		}
+	}
+}
+
+form {
+	label,
+	input,
+	button {
+		display: block;
+	}
+}
+
+.footer {
+	padding: $unit * 6;
+}

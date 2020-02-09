@@ -1,0 +1,33 @@
+{
+  "name": "api-routes-rest",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@octokit/rest": "^16.35.0",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "bcryptjs": "^2.4.3",
+    "cheerio": "^1.0.0-rc.3",
+    "connect-mongo": "^3.1.2",
+    "dotenv": "^8.2.0",
+    "isomorphic-unfetch": "3.0.0",
+    "marked": "^0.7.0",
+    "micro-redirect": "^1.0.0",
+    "mongoose": "^5.7.11",
+    "next": "latest",
+    "next-connect": "^0.5.1",
+    "next-session": "^2.1.1",
+    "node-sass": "^4.13.0",
+    "passport": "^0.4.0",
+    "passport-github2": "^0.1.11",
+    "passport-local": "^1.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^4.41.2"
+  },
+  "license": "ISC"
+}
