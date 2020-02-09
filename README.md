@@ -79,7 +79,7 @@ MONGODB_CONNECTION=
 COOKIE_NAME=cookie_name_here
 ```
 
-Entry the Github OAuth details, your MongoDB connection string, and change the coookie name to whatever you want it to be.
+Enter the Github OAuth details, your MongoDB connection string, and change the coookie name to whatever you want it to be.
 
 ## Some examples available at:
 
