@@ -1,4 +1,4 @@
-# Session Based Authentication with MongoDB and PassportJS
+# NextJS Session Based Authentication with MongoDB and PassportJS
 
 This repo is an example on how you can get PassportJS working with NextJS without the need for a custom server, and using only API routes.
 
