@@ -45,7 +45,8 @@ handler.post((req, res, next) =>
 			if (err) {
 				return next(err);
 			}
-			res.status(200).json({ status: 200 });
+
+			res.status(200).json({ status: 200, user });
 		});
 	})(req, res, next)
 );

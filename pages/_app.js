@@ -3,7 +3,6 @@ import App from 'next/app';
 import dynamic from 'next/dynamic';
 import { fetchWithCreds } from 'lib/fetch';
 import 'styles/global.scss';
-import Link from 'next/link';
 
 import { GlobalProvider, GlobalContext } from 'lib/state';
 

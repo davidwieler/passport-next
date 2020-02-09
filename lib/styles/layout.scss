@@ -67,6 +67,11 @@ nav {
 					input {
 						margin-bottom: $unit * 6;
 					}
+
+					.error {
+						color: red;
+						margin-top: $unit * 3;
+					}
 				}
 			}
 		}

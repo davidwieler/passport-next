@@ -6,7 +6,7 @@ const Header = ({ userData }) => {
 			<nav role="navigation" className="navigation">
 				<div className="brand">
 					<Link href="/">
-						<a>Brand</a>
+						<a>Home</a>
 					</Link>
 				</div>
 				<div className="access">

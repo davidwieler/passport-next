@@ -10,6 +10,11 @@ handler.use(connectDB);
 handler.post(async (req, res, next) => {
 	const { email, password } = req.body;
 
+	if (!email && !password) {
+		res.status(400).json({ status: 409, failedAuth: false, redirectTo: '/login', errorMessage: 'Invalid Entry' });
+		return;
+	}
+
 	// Try to find existing user by email
 	const userExists = await findUserByEmail({ email });
 

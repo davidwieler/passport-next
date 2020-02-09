@@ -14,8 +14,14 @@ const Index = () => {
 				<div>Homepage stuff</div>
 			) : (
 				<div>
+					Hey {userData.user.name || userData.user.email},
+					<br />
 					<Link href="/private">
-						<a>Hey {userData.user.name || userData.user.email}</a>
+						<a>Private Page Example</a>
+					</Link>
+					<br />
+					<Link href="/protected-example">
+						<a>Protected API Route Example</a>
 					</Link>
 				</div>
 			)}

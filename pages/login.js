@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import Router from 'next/router';
 
 const Login = () => {
 	const [loginError, setLoginError] = useState(false);
@@ -17,6 +16,7 @@ const Login = () => {
 		event.persist();
 
 		const data = new FormData(event.target);
+
 		const formatData = new URLSearchParams(data);
 
 		const response = await fetch('/api/register', {
@@ -29,11 +29,7 @@ const Login = () => {
 
 		const res = await response.json();
 
-		if (res.failedAuth) {
-			setLoginError(res.errorMessage);
-		}
-
-		if (res.status === 409) {
+		if (res.failedAuth || res.status === 409) {
 			setRegistrationError(res.errorMessage);
 		}
 
@@ -66,7 +62,8 @@ const Login = () => {
 		}
 
 		if (res.status === 200) {
-			Router.push('/private');
+			// Do a hard page redirect to the success login url
+			window.location.pathname = process.env.loginSuccessURL;
 		}
 	};
 
@@ -82,28 +79,28 @@ const Login = () => {
 			<div className="form-wrapper">
 				<h2>Login</h2>
 				<form onSubmit={handleLoginSubmit}>
-					<label for="login-ue">Username/Email</label>
+					<label htmlFor="login-ue">Username/Email</label>
 					<input name="email" type="text" id="login-ue" placeholder="Username or Email" />
 
-					<label for="login-password">Password</label>
+					<label htmlFor="login-password">Password</label>
 					<input name="password" type="password" id="login-password" placeholder="Password" />
 
 					<button>Login</button>
-					{loginError}
+					{loginError && <div className="error">{loginError}</div>}
 				</form>
 			</div>
 
 			<div className="form-wrapper">
 				<h2>Or Sign Up</h2>
 				<form onSubmit={handleRegisterSubmit}>
-					<label for="register-ue">Username/Email</label>
+					<label htmlFor="register-ue">Username/Email</label>
 					<input name="email" type="text" id="register-ue" placeholder="Username or Email" />
 
-					<label for="register-password">Password</label>
+					<label htmlFor="register-password">Password</label>
 					<input name="password" type="password" id="register-password" placeholder="Password" />
 
 					<button>Sign Up</button>
-					{registrationError}
+					{registrationError && <div className="error">{registrationError}</div>}
 				</form>
 			</div>
 		</div>
