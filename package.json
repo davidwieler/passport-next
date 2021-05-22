@@ -20,7 +20,7 @@
 		"next": "latest",
 		"next-connect": "^0.5.1",
 		"next-session": "^2.1.1",
-		"node-sass": "^4.13.0",
+		"node-sass": "^4.13.1",
 		"passport": "^0.4.0",
 		"passport-github2": "^0.1.11",
 		"passport-local": "^1.0.0",
